@@ -1,0 +1,16 @@
+all:;
+	gcc -o serverAlinux.o serverAlinux.c -lsocket -lnsl -lresolv
+	gcc -o serverBlinux.o serverBlinux.c -lsocket -lnsl -lresolv
+	gcc -o serverClinux.o serverClinux.c -lsocket -lnsl -lresolv
+	gcc -o awslinux.o awslinux.c -lsocket -lnsl -lresolv
+	gcc -o clientlinux.o clientlinux.c -lsocket -lnsl -lresolv
+serverAlinux:;
+	./serverAlinux.o
+serverBlinux:;
+	./serverBlinux.o
+serverClinux:;
+	./serverClinux.o
+awslinux:;
+	./awslinux.o
+clean:;
+	rm serverAlinux.o serverBlinux.o serverClinux.o awslinux.o client
